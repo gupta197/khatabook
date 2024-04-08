@@ -1,0 +1,1659 @@
+[
+        {
+            "name": "VaronisInternal",
+            "id": 7,
+            "facets": [
+                {
+                    "facetName": "Featured Content",
+                    "key": "general_new",
+                    "filter": [
+                        {
+                            "filterName": "Release Notes",
+                            "key": "release_notes_new"
+                        },
+                        {
+                            "filterName": "Interoperability Matrices",
+                            "key": "interoperability_matrices_new"
+                        },
+                        {
+                            "filterName": "Installation Prerequisites",
+                            "key": "installation_prerequisites_new"
+                        },
+                        {
+                            "filterName": "Ports and Protocols",
+                            "key": "ports_and_protocols_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Version",
+                    "key": "version_new",
+                    "filter": [
+                        {
+                            "filterName": "7.4",
+                            "key": "7_4"
+                        },
+                        {
+                            "filterName": "7.5",
+                            "key": "7_5_40"
+                        },
+                        {
+                            "filterName": "8.5",
+                            "key": "8_5_30"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Product",
+                    "key": "product_new",
+                    "filter": [
+                        {
+                            "filterName": "DatAdvantage",
+                            "key": "datadvantage_new"
+                        },
+                        {
+                            "filterName": "DatAdvantage Cloud",
+                            "key": "da_cloud"
+                        },
+                        {
+                            "filterName": "DatAlert Suite",
+                            "key": "datalert_-_datalert_analytics_new"
+                        },
+                        {
+                            "filterName": "Data Classification Engine",
+                            "key": "data_classification_engine_new"
+                        },
+                        {
+                            "filterName": "DCE VIP",
+                            "key": "dce_vip_new"
+                        },
+                        {
+                            "filterName": "Data Classification Policy Pack",
+                            "key": "data_classification_policy_pack_new"
+                        },
+                        {
+                            "filterName": "Data Classification Labels",
+                            "key": "data_classification_labels_new"
+                        },
+                        {
+                            "filterName": "Automation Engine",
+                            "key": "automation_engine_new"
+                        },
+                        {
+                            "filterName": "Data Transport Engine",
+                            "key": "data_transport_engine_new"
+                        },
+                        {
+                            "filterName": "Varonis Edge",
+                            "key": "varonis_edge_new"
+                        },
+                        {
+                            "filterName": "Edge VIP",
+                            "key": "edge_vip_new"
+                        },
+                        {
+                            "filterName": "DataPrivilege",
+                            "key": "dataprivilege_new"
+                        },
+                        {
+                            "filterName": "DatAnswers",
+                            "key": "datanswers_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Guides",
+                    "key": "activity_new",
+                    "filter": [
+                        {
+                            "filterName": "Product Overviews",
+                            "key": "getting_started_new"
+                        },
+                        {
+                            "filterName": "Product Deployment Guides",
+                            "key": "product_deployment"
+                        },
+                        {
+                            "filterName": "Resource Deployment Guides",
+                            "key": "resource_deployment"
+                        },
+                        {
+                            "filterName": "User Guides",
+                            "key": "usage_new"
+                        },
+                        {
+                            "filterName": "External Integration Guides",
+                            "key": "external_integration_new"
+                        },
+                        {
+                            "filterName": "Internal Use Only",
+                            "key": "internal_use_only_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Advisories",
+                    "key": "advisories_new",
+                    "filter": [
+                        {
+                            "filterName": "Known Issues",
+                            "key": "known_issues"
+                        },
+                        {
+                            "filterName": "Issue Advisories",
+                            "key": "issue_advisory"
+                        },
+                        {
+                            "filterName": "Security Advisories",
+                            "key": "security_advisory"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "External",
+                    "key": "External",
+                    "filter": [
+                        {
+                            "filterName": "External",
+                            "key": "external_child"
+                        },
+                        {
+                            "filterName": "Internal",
+                            "key": "Internal"
+                        },
+                        {
+                            "filterName": "Partial Internal",
+                            "key": "Partial_Internal"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Platform",
+                    "key": "Platform",
+                    "filter": [
+                        {
+                            "filterName": "All",
+                            "key": "All"
+                        },
+                        {
+                            "filterName": "Azure Active Directory",
+                            "key": "Azure_Active_Directory"
+                        },
+                        {
+                            "filterName": "Box",
+                            "key": "Box"
+                        },
+                        {
+                            "filterName": "Cohesity",
+                            "key": "Cohesity"
+                        },
+                        {
+                            "filterName": "CTERA",
+                            "key": "CTERA"
+                        },
+                        {
+                            "filterName": "Dell FluidFS",
+                            "key": "Dell_FluidFS"
+                        },
+                        {
+                            "filterName": "Directory Services",
+                            "key": "Directory_Services"
+                        },
+                        {
+                            "filterName": "Edge Sources",
+                            "key": "Edge_Sources"
+                        },
+                        {
+                            "filterName": "EMC Celerra",
+                            "key": "EMC_Celerra"
+                        },
+                        {
+                            "filterName": "EMC Isilon",
+                            "key": "EMC_Isilon"
+                        },
+                        {
+                            "filterName": "EMC Unity",
+                            "key": "EMC_Unity"
+                        },
+                        {
+                            "filterName": "EMC VNX",
+                            "key": "EMC_VNX"
+                        },
+                        {
+                            "filterName": "Exchange Online",
+                            "key": "Exchange_Online"
+                        },
+                        {
+                            "filterName": "Exchange On-Premises",
+                            "key": "Exchange_On-Premises"
+                        },
+                        {
+                            "filterName": "Hitachi NAS",
+                            "key": "Hitachi_NAS"
+                        },
+                        {
+                            "filterName": "HPE 3PAR",
+                            "key": "HPE_3PAR"
+                        },
+                        {
+                            "filterName": "HP-NAS",
+                            "key": "HP-NAS"
+                        },
+                        {
+                            "filterName": "IBM AIX",
+                            "key": "IBM_AIX"
+                        },
+                        {
+                            "filterName": "IBM Spectrum Scale (GPFS)",
+                            "key": "IBM_Spectrum_Scale_GPFS"
+                        },
+                        {
+                            "filterName": "IBM Storwize V7000 Unified",
+                            "key": "IBM_Storwize"
+                        },
+                        {
+                            "filterName": "Nasuni",
+                            "key": "Nasuni"
+                        },
+                        {
+                            "filterName": "NetApp",
+                            "key": "NetApp"
+                        },
+                        {
+                            "filterName": "Netgear ReadyNAS",
+                            "key": "Netgear_ReadyNAS"
+                        },
+                        {
+                            "filterName": "Novell OES",
+                            "key": "Novell_OES"
+                        },
+                        {
+                            "filterName": "Nutanix",
+                            "key": "Nutanix"
+                        },
+                        {
+                            "filterName": "Office 365",
+                            "key": "Office_365"
+                        },
+                        {
+                            "filterName": "OneDrive",
+                            "key": "OneDrive"
+                        },
+                        {
+                            "filterName": "Panzura",
+                            "key": "Panzura"
+                        },
+                        {
+                            "filterName": "Scality RING",
+                            "key": "Scality_RING"
+                        },
+                        {
+                            "filterName": "SharePoint Online",
+                            "key": "SharePoint_Online"
+                        },
+                        {
+                            "filterName": "SharePoint On-Premises",
+                            "key": "SharePoint_On-Premises"
+                        },
+                        {
+                            "filterName": "Sun Solaris - Open Solaris",
+                            "key": "Sun_Solaris_Open_Solaris"
+                        },
+                        {
+                            "filterName": "Linux",
+                            "key": "Linux"
+                        },
+                        {
+                            "filterName": "Unix Samba",
+                            "key": "Unix_Samba"
+                        },
+                        {
+                            "filterName": "Unix",
+                            "key": "Unix"
+                        },
+                        {
+                            "filterName": "Windows",
+                            "key": "Windows"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Training Team",
+            "id": 6,
+            "facets": []
+        },
+        {
+            "name": "TechnicalWriters",
+            "id": 2,
+            "facets": [
+                {
+                    "facetName": "Featured Content",
+                    "key": "general_new",
+                    "filter": [
+                        {
+                            "filterName": "Release Notes",
+                            "key": "release_notes_new"
+                        },
+                        {
+                            "filterName": "Interoperability Matrices",
+                            "key": "interoperability_matrices_new"
+                        },
+                        {
+                            "filterName": "Installation Prerequisites",
+                            "key": "installation_prerequisites_new"
+                        },
+                        {
+                            "filterName": "Ports and Protocols",
+                            "key": "ports_and_protocols_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Version",
+                    "key": "version_new",
+                    "filter": [
+                        {
+                            "filterName": "7.4",
+                            "key": "7_4"
+                        },
+                        {
+                            "filterName": "7.5",
+                            "key": "7_5_40"
+                        },
+                        {
+                            "filterName": "8.5",
+                            "key": "8_5_30"
+                        },
+                        {
+                            "filterName": "8.6.14 (OLD)",
+                            "key": "8_6_10"
+                        },
+                        {
+                            "filterName": "8.6.20 (Ring 1)",
+                            "key": "8_6_20"
+                        },
+                        {
+                            "filterName": "8.7 (Not Released)",
+                            "key": "8_7"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Product",
+                    "key": "product_new",
+                    "filter": [
+                        {
+                            "filterName": "DatAdvantage",
+                            "key": "datadvantage_new"
+                        },
+                        {
+                            "filterName": "DatAdvantage Cloud",
+                            "key": "da_cloud"
+                        },
+                        {
+                            "filterName": "DatAlert Suite",
+                            "key": "datalert_-_datalert_analytics_new"
+                        },
+                        {
+                            "filterName": "Data Classification Engine",
+                            "key": "data_classification_engine_new"
+                        },
+                        {
+                            "filterName": "DCE VIP",
+                            "key": "dce_vip_new"
+                        },
+                        {
+                            "filterName": "Data Classification Policy Pack",
+                            "key": "data_classification_policy_pack_new"
+                        },
+                        {
+                            "filterName": "Data Classification Labels",
+                            "key": "data_classification_labels_new"
+                        },
+                        {
+                            "filterName": "Automation Engine",
+                            "key": "automation_engine_new"
+                        },
+                        {
+                            "filterName": "Data Transport Engine",
+                            "key": "data_transport_engine_new"
+                        },
+                        {
+                            "filterName": "Varonis Edge",
+                            "key": "varonis_edge_new"
+                        },
+                        {
+                            "filterName": "Edge VIP",
+                            "key": "edge_vip_new"
+                        },
+                        {
+                            "filterName": "DataPrivilege",
+                            "key": "dataprivilege_new"
+                        },
+                        {
+                            "filterName": "DatAnswers",
+                            "key": "datanswers_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Guides",
+                    "key": "activity_new",
+                    "filter": [
+                        {
+                            "filterName": "Product Overviews",
+                            "key": "getting_started_new"
+                        },
+                        {
+                            "filterName": "Product Deployment Guides",
+                            "key": "product_deployment"
+                        },
+                        {
+                            "filterName": "Resource Deployment Guides",
+                            "key": "resource_deployment"
+                        },
+                        {
+                            "filterName": "User Guides",
+                            "key": "usage_new"
+                        },
+                        {
+                            "filterName": "External Integration Guides",
+                            "key": "external_integration_new"
+                        },
+                        {
+                            "filterName": "Internal Use Only",
+                            "key": "internal_use_only_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Advisories",
+                    "key": "advisories_new",
+                    "filter": [
+                        {
+                            "filterName": "Known Issues",
+                            "key": "known_issues"
+                        },
+                        {
+                            "filterName": "Issue Advisories",
+                            "key": "issue_advisory"
+                        },
+                        {
+                            "filterName": "Security Advisories",
+                            "key": "security_advisory"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Varonis Cloud",
+                    "key": "varonis_cloud",
+                    "filter": [
+                        {
+                            "filterName": "Varonis Cloud",
+                            "key": "cloud_alpha"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "External",
+                    "key": "External",
+                    "filter": [
+                        {
+                            "filterName": "External",
+                            "key": "external_child"
+                        },
+                        {
+                            "filterName": "Internal",
+                            "key": "Internal"
+                        },
+                        {
+                            "filterName": "Partial Internal",
+                            "key": "Partial_Internal"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Platform",
+                    "key": "Platform",
+                    "filter": [
+                        {
+                            "filterName": "All",
+                            "key": "All"
+                        },
+                        {
+                            "filterName": "Azure Active Directory",
+                            "key": "Azure_Active_Directory"
+                        },
+                        {
+                            "filterName": "Box",
+                            "key": "Box"
+                        },
+                        {
+                            "filterName": "Cohesity",
+                            "key": "Cohesity"
+                        },
+                        {
+                            "filterName": "CTERA",
+                            "key": "CTERA"
+                        },
+                        {
+                            "filterName": "Dell FluidFS",
+                            "key": "Dell_FluidFS"
+                        },
+                        {
+                            "filterName": "Directory Services",
+                            "key": "Directory_Services"
+                        },
+                        {
+                            "filterName": "Edge Sources",
+                            "key": "Edge_Sources"
+                        },
+                        {
+                            "filterName": "EMC Celerra",
+                            "key": "EMC_Celerra"
+                        },
+                        {
+                            "filterName": "EMC Isilon",
+                            "key": "EMC_Isilon"
+                        },
+                        {
+                            "filterName": "EMC Unity",
+                            "key": "EMC_Unity"
+                        },
+                        {
+                            "filterName": "EMC VNX",
+                            "key": "EMC_VNX"
+                        },
+                        {
+                            "filterName": "Exchange Online",
+                            "key": "Exchange_Online"
+                        },
+                        {
+                            "filterName": "Exchange On-Premises",
+                            "key": "Exchange_On-Premises"
+                        },
+                        {
+                            "filterName": "Hitachi NAS",
+                            "key": "Hitachi_NAS"
+                        },
+                        {
+                            "filterName": "HPE 3PAR",
+                            "key": "HPE_3PAR"
+                        },
+                        {
+                            "filterName": "HP-NAS",
+                            "key": "HP-NAS"
+                        },
+                        {
+                            "filterName": "IBM AIX",
+                            "key": "IBM_AIX"
+                        },
+                        {
+                            "filterName": "IBM Spectrum Scale (GPFS)",
+                            "key": "IBM_Spectrum_Scale_GPFS"
+                        },
+                        {
+                            "filterName": "IBM Storwize V7000 Unified",
+                            "key": "IBM_Storwize"
+                        },
+                        {
+                            "filterName": "Nasuni",
+                            "key": "Nasuni"
+                        },
+                        {
+                            "filterName": "NetApp",
+                            "key": "NetApp"
+                        },
+                        {
+                            "filterName": "Netgear ReadyNAS",
+                            "key": "Netgear_ReadyNAS"
+                        },
+                        {
+                            "filterName": "Novell OES",
+                            "key": "Novell_OES"
+                        },
+                        {
+                            "filterName": "Nutanix",
+                            "key": "Nutanix"
+                        },
+                        {
+                            "filterName": "Office 365",
+                            "key": "Office_365"
+                        },
+                        {
+                            "filterName": "OneDrive",
+                            "key": "OneDrive"
+                        },
+                        {
+                            "filterName": "Panzura",
+                            "key": "Panzura"
+                        },
+                        {
+                            "filterName": "Scality RING",
+                            "key": "Scality_RING"
+                        },
+                        {
+                            "filterName": "SharePoint Online",
+                            "key": "SharePoint_Online"
+                        },
+                        {
+                            "filterName": "SharePoint On-Premises",
+                            "key": "SharePoint_On-Premises"
+                        },
+                        {
+                            "filterName": "Sun Solaris - Open Solaris",
+                            "key": "Sun_Solaris_Open_Solaris"
+                        },
+                        {
+                            "filterName": "Linux",
+                            "key": "Linux"
+                        },
+                        {
+                            "filterName": "Unix Samba",
+                            "key": "Unix_Samba"
+                        },
+                        {
+                            "filterName": "Unix",
+                            "key": "Unix"
+                        },
+                        {
+                            "filterName": "Windows",
+                            "key": "Windows"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Ring1Customers",
+            "id": 11,
+            "facets": [
+                {
+                    "facetName": "Version",
+                    "key": "version_new",
+                    "filter": [
+                        {
+                            "filterName": "8.6.14 (OLD)",
+                            "key": "8_6_10"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Public",
+            "id": 1,
+            "facets": [
+                {
+                    "facetName": "Featured Content",
+                    "key": "general_new",
+                    "filter": [
+                        {
+                            "filterName": "Release Notes",
+                            "key": "release_notes_new"
+                        },
+                        {
+                            "filterName": "Interoperability Matrices",
+                            "key": "interoperability_matrices_new"
+                        },
+                        {
+                            "filterName": "Installation Prerequisites",
+                            "key": "installation_prerequisites_new"
+                        },
+                        {
+                            "filterName": "Ports and Protocols",
+                            "key": "ports_and_protocols_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Version",
+                    "key": "version_new",
+                    "filter": [
+                        {
+                            "filterName": "7.4",
+                            "key": "7_4"
+                        },
+                        {
+                            "filterName": "7.5",
+                            "key": "7_5_40"
+                        },
+                        {
+                            "filterName": "8.5",
+                            "key": "8_5_30"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Product",
+                    "key": "product_new",
+                    "filter": [
+                        {
+                            "filterName": "DatAdvantage",
+                            "key": "datadvantage_new"
+                        },
+                        {
+                            "filterName": "DatAdvantage Cloud",
+                            "key": "da_cloud"
+                        },
+                        {
+                            "filterName": "DatAlert Suite",
+                            "key": "datalert_-_datalert_analytics_new"
+                        },
+                        {
+                            "filterName": "Data Classification Engine",
+                            "key": "data_classification_engine_new"
+                        },
+                        {
+                            "filterName": "DCE VIP",
+                            "key": "dce_vip_new"
+                        },
+                        {
+                            "filterName": "Data Classification Policy Pack",
+                            "key": "data_classification_policy_pack_new"
+                        },
+                        {
+                            "filterName": "Data Classification Labels",
+                            "key": "data_classification_labels_new"
+                        },
+                        {
+                            "filterName": "Automation Engine",
+                            "key": "automation_engine_new"
+                        },
+                        {
+                            "filterName": "Data Transport Engine",
+                            "key": "data_transport_engine_new"
+                        },
+                        {
+                            "filterName": "Varonis Edge",
+                            "key": "varonis_edge_new"
+                        },
+                        {
+                            "filterName": "Edge VIP",
+                            "key": "edge_vip_new"
+                        },
+                        {
+                            "filterName": "DataPrivilege",
+                            "key": "dataprivilege_new"
+                        },
+                        {
+                            "filterName": "DatAnswers",
+                            "key": "datanswers_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Guides",
+                    "key": "activity_new",
+                    "filter": [
+                        {
+                            "filterName": "Product Overviews",
+                            "key": "getting_started_new"
+                        },
+                        {
+                            "filterName": "Product Deployment Guides",
+                            "key": "product_deployment"
+                        },
+                        {
+                            "filterName": "Resource Deployment Guides",
+                            "key": "resource_deployment"
+                        },
+                        {
+                            "filterName": "User Guides",
+                            "key": "usage_new"
+                        },
+                        {
+                            "filterName": "External Integration Guides",
+                            "key": "external_integration_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Advisories",
+                    "key": "advisories_new",
+                    "filter": [
+                        {
+                            "filterName": "Known Issues",
+                            "key": "known_issues"
+                        },
+                        {
+                            "filterName": "Issue Advisories",
+                            "key": "issue_advisory"
+                        },
+                        {
+                            "filterName": "Security Advisories",
+                            "key": "security_advisory"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "External",
+                    "key": "External",
+                    "filter": [
+                        {
+                            "filterName": "External",
+                            "key": "external_child"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Platform",
+                    "key": "Platform",
+                    "filter": [
+                        {
+                            "filterName": "All",
+                            "key": "All"
+                        },
+                        {
+                            "filterName": "Azure Active Directory",
+                            "key": "Azure_Active_Directory"
+                        },
+                        {
+                            "filterName": "Box",
+                            "key": "Box"
+                        },
+                        {
+                            "filterName": "Cohesity",
+                            "key": "Cohesity"
+                        },
+                        {
+                            "filterName": "CTERA",
+                            "key": "CTERA"
+                        },
+                        {
+                            "filterName": "Dell FluidFS",
+                            "key": "Dell_FluidFS"
+                        },
+                        {
+                            "filterName": "Directory Services",
+                            "key": "Directory_Services"
+                        },
+                        {
+                            "filterName": "Edge Sources",
+                            "key": "Edge_Sources"
+                        },
+                        {
+                            "filterName": "EMC Celerra",
+                            "key": "EMC_Celerra"
+                        },
+                        {
+                            "filterName": "EMC Isilon",
+                            "key": "EMC_Isilon"
+                        },
+                        {
+                            "filterName": "EMC Unity",
+                            "key": "EMC_Unity"
+                        },
+                        {
+                            "filterName": "EMC VNX",
+                            "key": "EMC_VNX"
+                        },
+                        {
+                            "filterName": "Exchange Online",
+                            "key": "Exchange_Online"
+                        },
+                        {
+                            "filterName": "Exchange On-Premises",
+                            "key": "Exchange_On-Premises"
+                        },
+                        {
+                            "filterName": "Hitachi NAS",
+                            "key": "Hitachi_NAS"
+                        },
+                        {
+                            "filterName": "HPE 3PAR",
+                            "key": "HPE_3PAR"
+                        },
+                        {
+                            "filterName": "HP-NAS",
+                            "key": "HP-NAS"
+                        },
+                        {
+                            "filterName": "IBM AIX",
+                            "key": "IBM_AIX"
+                        },
+                        {
+                            "filterName": "IBM Spectrum Scale (GPFS)",
+                            "key": "IBM_Spectrum_Scale_GPFS"
+                        },
+                        {
+                            "filterName": "IBM Storwize V7000 Unified",
+                            "key": "IBM_Storwize"
+                        },
+                        {
+                            "filterName": "Nasuni",
+                            "key": "Nasuni"
+                        },
+                        {
+                            "filterName": "NetApp",
+                            "key": "NetApp"
+                        },
+                        {
+                            "filterName": "Netgear ReadyNAS",
+                            "key": "Netgear_ReadyNAS"
+                        },
+                        {
+                            "filterName": "Novell OES",
+                            "key": "Novell_OES"
+                        },
+                        {
+                            "filterName": "Nutanix",
+                            "key": "Nutanix"
+                        },
+                        {
+                            "filterName": "Office 365",
+                            "key": "Office_365"
+                        },
+                        {
+                            "filterName": "OneDrive",
+                            "key": "OneDrive"
+                        },
+                        {
+                            "filterName": "Panzura",
+                            "key": "Panzura"
+                        },
+                        {
+                            "filterName": "Scality RING",
+                            "key": "Scality_RING"
+                        },
+                        {
+                            "filterName": "SharePoint Online",
+                            "key": "SharePoint_Online"
+                        },
+                        {
+                            "filterName": "SharePoint On-Premises",
+                            "key": "SharePoint_On-Premises"
+                        },
+                        {
+                            "filterName": "Sun Solaris - Open Solaris",
+                            "key": "Sun_Solaris_Open_Solaris"
+                        },
+                        {
+                            "filterName": "Linux",
+                            "key": "Linux"
+                        },
+                        {
+                            "filterName": "Unix Samba",
+                            "key": "Unix_Samba"
+                        },
+                        {
+                            "filterName": "Unix",
+                            "key": "Unix"
+                        },
+                        {
+                            "filterName": "Windows",
+                            "key": "Windows"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "PM",
+            "id": 4,
+            "facets": [
+                {
+                    "facetName": "Featured Content",
+                    "key": "general_new",
+                    "filter": [
+                        {
+                            "filterName": "Release Notes",
+                            "key": "release_notes_new"
+                        },
+                        {
+                            "filterName": "Interoperability Matrices",
+                            "key": "interoperability_matrices_new"
+                        },
+                        {
+                            "filterName": "Installation Prerequisites",
+                            "key": "installation_prerequisites_new"
+                        },
+                        {
+                            "filterName": "Ports and Protocols",
+                            "key": "ports_and_protocols_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Version",
+                    "key": "version_new",
+                    "filter": [
+                        {
+                            "filterName": "7.4",
+                            "key": "7_4"
+                        },
+                        {
+                            "filterName": "7.5",
+                            "key": "7_5_40"
+                        },
+                        {
+                            "filterName": "8.5",
+                            "key": "8_5_30"
+                        },
+                        {
+                            "filterName": "8.6.14 (OLD)",
+                            "key": "8_6_10"
+                        },
+                        {
+                            "filterName": "8.6.20 (Ring 1)",
+                            "key": "8_6_20"
+                        },
+                        {
+                            "filterName": "8.7 (Not Released)",
+                            "key": "8_7"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Product",
+                    "key": "product_new",
+                    "filter": [
+                        {
+                            "filterName": "DatAdvantage",
+                            "key": "datadvantage_new"
+                        },
+                        {
+                            "filterName": "DatAdvantage Cloud",
+                            "key": "da_cloud"
+                        },
+                        {
+                            "filterName": "DatAlert Suite",
+                            "key": "datalert_-_datalert_analytics_new"
+                        },
+                        {
+                            "filterName": "Data Classification Engine",
+                            "key": "data_classification_engine_new"
+                        },
+                        {
+                            "filterName": "DCE VIP",
+                            "key": "dce_vip_new"
+                        },
+                        {
+                            "filterName": "Data Classification Policy Pack",
+                            "key": "data_classification_policy_pack_new"
+                        },
+                        {
+                            "filterName": "Data Classification Labels",
+                            "key": "data_classification_labels_new"
+                        },
+                        {
+                            "filterName": "Automation Engine",
+                            "key": "automation_engine_new"
+                        },
+                        {
+                            "filterName": "Data Transport Engine",
+                            "key": "data_transport_engine_new"
+                        },
+                        {
+                            "filterName": "Varonis Edge",
+                            "key": "varonis_edge_new"
+                        },
+                        {
+                            "filterName": "Edge VIP",
+                            "key": "edge_vip_new"
+                        },
+                        {
+                            "filterName": "DataPrivilege",
+                            "key": "dataprivilege_new"
+                        },
+                        {
+                            "filterName": "DatAnswers",
+                            "key": "datanswers_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Guides",
+                    "key": "activity_new",
+                    "filter": [
+                        {
+                            "filterName": "Product Overviews",
+                            "key": "getting_started_new"
+                        },
+                        {
+                            "filterName": "Product Deployment Guides",
+                            "key": "product_deployment"
+                        },
+                        {
+                            "filterName": "Resource Deployment Guides",
+                            "key": "resource_deployment"
+                        },
+                        {
+                            "filterName": "User Guides",
+                            "key": "usage_new"
+                        },
+                        {
+                            "filterName": "External Integration Guides",
+                            "key": "external_integration_new"
+                        },
+                        {
+                            "filterName": "Internal Use Only",
+                            "key": "internal_use_only_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Advisories",
+                    "key": "advisories_new",
+                    "filter": [
+                        {
+                            "filterName": "Known Issues",
+                            "key": "known_issues"
+                        },
+                        {
+                            "filterName": "Issue Advisories",
+                            "key": "issue_advisory"
+                        },
+                        {
+                            "filterName": "Security Advisories",
+                            "key": "security_advisory"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Varonis Cloud",
+                    "key": "varonis_cloud",
+                    "filter": [
+                        {
+                            "filterName": "Varonis Cloud",
+                            "key": "cloud_alpha"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "External",
+                    "key": "External",
+                    "filter": [
+                        {
+                            "filterName": "External",
+                            "key": "external_child"
+                        },
+                        {
+                            "filterName": "Internal",
+                            "key": "Internal"
+                        },
+                        {
+                            "filterName": "Partial Internal",
+                            "key": "Partial_Internal"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Platform",
+                    "key": "Platform",
+                    "filter": [
+                        {
+                            "filterName": "All",
+                            "key": "All"
+                        },
+                        {
+                            "filterName": "Azure Active Directory",
+                            "key": "Azure_Active_Directory"
+                        },
+                        {
+                            "filterName": "Box",
+                            "key": "Box"
+                        },
+                        {
+                            "filterName": "Cohesity",
+                            "key": "Cohesity"
+                        },
+                        {
+                            "filterName": "CTERA",
+                            "key": "CTERA"
+                        },
+                        {
+                            "filterName": "Dell FluidFS",
+                            "key": "Dell_FluidFS"
+                        },
+                        {
+                            "filterName": "Directory Services",
+                            "key": "Directory_Services"
+                        },
+                        {
+                            "filterName": "Edge Sources",
+                            "key": "Edge_Sources"
+                        },
+                        {
+                            "filterName": "EMC Celerra",
+                            "key": "EMC_Celerra"
+                        },
+                        {
+                            "filterName": "EMC Isilon",
+                            "key": "EMC_Isilon"
+                        },
+                        {
+                            "filterName": "EMC Unity",
+                            "key": "EMC_Unity"
+                        },
+                        {
+                            "filterName": "EMC VNX",
+                            "key": "EMC_VNX"
+                        },
+                        {
+                            "filterName": "Exchange Online",
+                            "key": "Exchange_Online"
+                        },
+                        {
+                            "filterName": "Exchange On-Premises",
+                            "key": "Exchange_On-Premises"
+                        },
+                        {
+                            "filterName": "Hitachi NAS",
+                            "key": "Hitachi_NAS"
+                        },
+                        {
+                            "filterName": "HPE 3PAR",
+                            "key": "HPE_3PAR"
+                        },
+                        {
+                            "filterName": "HP-NAS",
+                            "key": "HP-NAS"
+                        },
+                        {
+                            "filterName": "IBM AIX",
+                            "key": "IBM_AIX"
+                        },
+                        {
+                            "filterName": "IBM Spectrum Scale (GPFS)",
+                            "key": "IBM_Spectrum_Scale_GPFS"
+                        },
+                        {
+                            "filterName": "IBM Storwize V7000 Unified",
+                            "key": "IBM_Storwize"
+                        },
+                        {
+                            "filterName": "Nasuni",
+                            "key": "Nasuni"
+                        },
+                        {
+                            "filterName": "NetApp",
+                            "key": "NetApp"
+                        },
+                        {
+                            "filterName": "Netgear ReadyNAS",
+                            "key": "Netgear_ReadyNAS"
+                        },
+                        {
+                            "filterName": "Novell OES",
+                            "key": "Novell_OES"
+                        },
+                        {
+                            "filterName": "Nutanix",
+                            "key": "Nutanix"
+                        },
+                        {
+                            "filterName": "Office 365",
+                            "key": "Office_365"
+                        },
+                        {
+                            "filterName": "OneDrive",
+                            "key": "OneDrive"
+                        },
+                        {
+                            "filterName": "Panzura",
+                            "key": "Panzura"
+                        },
+                        {
+                            "filterName": "Scality RING",
+                            "key": "Scality_RING"
+                        },
+                        {
+                            "filterName": "SharePoint Online",
+                            "key": "SharePoint_Online"
+                        },
+                        {
+                            "filterName": "SharePoint On-Premises",
+                            "key": "SharePoint_On-Premises"
+                        },
+                        {
+                            "filterName": "Sun Solaris - Open Solaris",
+                            "key": "Sun_Solaris_Open_Solaris"
+                        },
+                        {
+                            "filterName": "Linux",
+                            "key": "Linux"
+                        },
+                        {
+                            "filterName": "Unix Samba",
+                            "key": "Unix_Samba"
+                        },
+                        {
+                            "filterName": "Unix",
+                            "key": "Unix"
+                        },
+                        {
+                            "filterName": "Windows",
+                            "key": "Windows"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Eng And QA",
+            "id": 9,
+            "facets": [
+                {
+                    "facetName": "Featured Content",
+                    "key": "general_new",
+                    "filter": [
+                        {
+                            "filterName": "Release Notes",
+                            "key": "release_notes_new"
+                        },
+                        {
+                            "filterName": "Interoperability Matrices",
+                            "key": "interoperability_matrices_new"
+                        },
+                        {
+                            "filterName": "Installation Prerequisites",
+                            "key": "installation_prerequisites_new"
+                        },
+                        {
+                            "filterName": "Ports and Protocols",
+                            "key": "ports_and_protocols_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Version",
+                    "key": "version_new",
+                    "filter": [
+                        {
+                            "filterName": "7.4",
+                            "key": "7_4"
+                        },
+                        {
+                            "filterName": "7.5",
+                            "key": "7_5_40"
+                        },
+                        {
+                            "filterName": "8.5",
+                            "key": "8_5_30"
+                        },
+                        {
+                            "filterName": "8.6.20 (Ring 1)",
+                            "key": "8_6_20"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Product",
+                    "key": "product_new",
+                    "filter": [
+                        {
+                            "filterName": "DatAdvantage",
+                            "key": "datadvantage_new"
+                        },
+                        {
+                            "filterName": "DatAdvantage Cloud",
+                            "key": "da_cloud"
+                        },
+                        {
+                            "filterName": "DatAlert Suite",
+                            "key": "datalert_-_datalert_analytics_new"
+                        },
+                        {
+                            "filterName": "Data Classification Engine",
+                            "key": "data_classification_engine_new"
+                        },
+                        {
+                            "filterName": "DCE VIP",
+                            "key": "dce_vip_new"
+                        },
+                        {
+                            "filterName": "Data Classification Policy Pack",
+                            "key": "data_classification_policy_pack_new"
+                        },
+                        {
+                            "filterName": "Data Classification Labels",
+                            "key": "data_classification_labels_new"
+                        },
+                        {
+                            "filterName": "Automation Engine",
+                            "key": "automation_engine_new"
+                        },
+                        {
+                            "filterName": "Data Transport Engine",
+                            "key": "data_transport_engine_new"
+                        },
+                        {
+                            "filterName": "Varonis Edge",
+                            "key": "varonis_edge_new"
+                        },
+                        {
+                            "filterName": "Edge VIP",
+                            "key": "edge_vip_new"
+                        },
+                        {
+                            "filterName": "DataPrivilege",
+                            "key": "dataprivilege_new"
+                        },
+                        {
+                            "filterName": "DatAnswers",
+                            "key": "datanswers_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Guides",
+                    "key": "activity_new",
+                    "filter": [
+                        {
+                            "filterName": "Product Overviews",
+                            "key": "getting_started_new"
+                        },
+                        {
+                            "filterName": "Product Deployment Guides",
+                            "key": "product_deployment"
+                        },
+                        {
+                            "filterName": "Resource Deployment Guides",
+                            "key": "resource_deployment"
+                        },
+                        {
+                            "filterName": "User Guides",
+                            "key": "usage_new"
+                        },
+                        {
+                            "filterName": "External Integration Guides",
+                            "key": "external_integration_new"
+                        },
+                        {
+                            "filterName": "Internal Use Only",
+                            "key": "internal_use_only_new"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Advisories",
+                    "key": "advisories_new",
+                    "filter": [
+                        {
+                            "filterName": "Known Issues",
+                            "key": "known_issues"
+                        },
+                        {
+                            "filterName": "Issue Advisories",
+                            "key": "issue_advisory"
+                        },
+                        {
+                            "filterName": "Security Advisories",
+                            "key": "security_advisory"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "External",
+                    "key": "External",
+                    "filter": [
+                        {
+                            "filterName": "External",
+                            "key": "external_child"
+                        },
+                        {
+                            "filterName": "Internal",
+                            "key": "Internal"
+                        },
+                        {
+                            "filterName": "Partial Internal",
+                            "key": "Partial_Internal"
+                        }
+                    ]
+                },
+                {
+                    "facetName": "Platform",
+                    "key": "Platform",
+                    "filter": [
+                        {
+                            "filterName": "All",
+                            "key": "All"
+                        },
+                        {
+                            "filterName": "Azure Active Directory",
+                            "key": "Azure_Active_Directory"
+                        },
+                        {
+                            "filterName": "Box",
+                            "key": "Box"
+                        },
+                        {
+                            "filterName": "Cohesity",
+                            "key": "Cohesity"
+                        },
+                        {
+                            "filterName": "CTERA",
+                            "key": "CTERA"
+                        },
+                        {
+                            "filterName": "Dell FluidFS",
+                            "key": "Dell_FluidFS"
+                        },
+                        {
+                            "filterName": "Directory Services",
+                            "key": "Directory_Services"
+                        },
+                        {
+                            "filterName": "Edge Sources",
+                            "key": "Edge_Sources"
+                        },
+                        {
+                            "filterName": "EMC Celerra",
+                            "key": "EMC_Celerra"
+                        },
+                        {
+                            "filterName": "EMC Isilon",
+                            "key": "EMC_Isilon"
+                        },
+                        {
+                            "filterName": "EMC Unity",
+                            "key": "EMC_Unity"
+                        },
+                        {
+                            "filterName": "EMC VNX",
+                            "key": "EMC_VNX"
+                        },
+                        {
+                            "filterName": "Exchange Online",
+                            "key": "Exchange_Online"
+                        },
+                        {
+                            "filterName": "Exchange On-Premises",
+                            "key": "Exchange_On-Premises"
+                        },
+                        {
+                            "filterName": "Hitachi NAS",
+                            "key": "Hitachi_NAS"
+                        },
+                        {
+                            "filterName": "HPE 3PAR",
+                            "key": "HPE_3PAR"
+                        },
+                        {
+                            "filterName": "HP-NAS",
+                            "key": "HP-NAS"
+                        },
+                        {
+                            "filterName": "IBM AIX",
+                            "key": "IBM_AIX"
+                        },
+                        {
+                            "filterName": "IBM Spectrum Scale (GPFS)",
+                            "key": "IBM_Spectrum_Scale_GPFS"
+                        },
+                        {
+                            "filterName": "IBM Storwize V7000 Unified",
+                            "key": "IBM_Storwize"
+                        },
+                        {
+                            "filterName": "Nasuni",
+                            "key": "Nasuni"
+                        },
+                        {
+                            "filterName": "NetApp",
+                            "key": "NetApp"
+                        },
+                        {
+                            "filterName": "Netgear ReadyNAS",
+                            "key": "Netgear_ReadyNAS"
+                        },
+                        {
+                            "filterName": "Novell OES",
+                            "key": "Novell_OES"
+                        },
+                        {
+                            "filterName": "Nutanix",
+                            "key": "Nutanix"
+                        },
+                        {
+                            "filterName": "Office 365",
+                            "key": "Office_365"
+                        },
+                        {
+                            "filterName": "OneDrive",
+                            "key": "OneDrive"
+                        },
+                        {
+                            "filterName": "Panzura",
+                            "key": "Panzura"
+                        },
+                        {
+                            "filterName": "Scality RING",
+                            "key": "Scality_RING"
+                        },
+                        {
+                            "filterName": "SharePoint Online",
+                            "key": "SharePoint_Online"
+                        },
+                        {
+                            "filterName": "SharePoint On-Premises",
+                            "key": "SharePoint_On-Premises"
+                        },
+                        {
+                            "filterName": "Sun Solaris - Open Solaris",
+                            "key": "Sun_Solaris_Open_Solaris"
+                        },
+                        {
+                            "filterName": "Linux",
+                            "key": "Linux"
+                        },
+                        {
+                            "filterName": "Unix Samba",
+                            "key": "Unix_Samba"
+                        },
+                        {
+                            "filterName": "Unix",
+                            "key": "Unix"
+                        },
+                        {
+                            "filterName": "Windows",
+                            "key": "Windows"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
