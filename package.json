@@ -8,7 +8,7 @@
     "live": "export NODE_ENV=live && pm2 start server.js --name LIVE_KHATABOOK",
     "start": "node server.js"
   },
-  "keywords": [],
+  "keywords": ["khatabook", "book","khata"],
   "author": "Vikas gupta",
   "license": "ISC",
   "dependencies": {

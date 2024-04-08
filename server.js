@@ -2,7 +2,7 @@
 const cors = require('cors');
 const responses = require('./lib/constants/responses');
 const statusCode = require('./lib/statusCodes/status_codes');
-const { authorizeBaseCamp } = require('./controllers/basecampController');
+// const { authorizeBaseCamp } = require('./controllers/basecampController');
 process.env.NODE_CONFIG_DIR = 'config/';
 process.env.PORT =  process.env.PORT || 8888;
 // Moving NODE_APP_INSTANCE aside during configuration loading
@@ -22,25 +22,10 @@ app.use(express.json({ limit: '50mb' }));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.get('/expire', (req,res) => {
-    const file = path.join(__dirname, './partials/link_expire');
-    return res.render(file);
-});
-
-// Step 1: Redirect user to Basecamp for authorization
-/*app.get('/basecamp', (req, res) => {
-    const authUrl = `https://launchpad.37signals.com/authorization/new?type=web_server&client_id=${clientId}&redirect_uri=${redirectUri}`;
-    res.redirect(authUrl);
-  });
-  */
   
   // Step 2: Handle callback from Basecamp
-app.get('/authbasecamp', authorizeBaseCamp);
+// app.get('/authbasecamp', authorizeBaseCamp);
 
-app.get('/success', (req,res) => {
-    const file = path.join(__dirname, './partials/success');
-    return res.render(file);
-});
 
 app.use('/static', express.static(path.join(__dirname, './uploads/')));
 
