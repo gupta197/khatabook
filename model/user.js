@@ -18,6 +18,9 @@ var userSchema = new Schema({
     type: String,
     unique: true
   },
+  phone: {
+    type: String
+  },
   password: {
     type: String,
   },
