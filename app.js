@@ -36,7 +36,7 @@ app.use("/user",users);
 
 // Home page API
 app.get('/',(req,res)=>{
-    res.send("Welcome to authentication and authorization on Boarding APIS")
+    res.send("Welcome to Khatabook")
 })
 //No Page API
 app.get('**',(req,res)=>{

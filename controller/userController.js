@@ -80,9 +80,9 @@ exports.contactSuppport = async (req, res) => {
         <strong>Thanks</strong> <br />
         <strong>${process.env.APPNAME} </strong>`,
     };
-    commonFunctions.sendEmail(template);
+    await commonFunctions.sendEmail(template);
     return res.status(200).send({
-      success: false,
+      success: true,
       message: "email Sent to user.",
     });
   } catch (error) {
