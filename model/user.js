@@ -6,7 +6,7 @@ const mongoose = require('mongoose'),
  */
 var userSchema = new Schema({
   userId: {
-    type: Number
+    type: String,
   },
   firstName: {
     type: String,

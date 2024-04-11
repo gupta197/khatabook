@@ -4,7 +4,9 @@ const otpVerification = require("../model/otpVerification");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken"),
 Joi = require('joi')
-const commonFunctions = require("../commonFunctions");
+const commonFunctions = require("../commonFunctions"),
+mongoose = require('mongoose');
+
 module.exports = {
   login: async (req, res) => {
     try {
@@ -55,7 +57,7 @@ module.exports = {
         });
       }
       return res.status(400).send({
-        success: true,
+        success: false,
         message: "Invalid Credentials",
       });
     } catch (err) {
@@ -80,7 +82,7 @@ module.exports = {
     const { error } = schema.validate(req.body);
       if (error) {
         return res.status(400).send({
-          success: true,
+          success: false,
           message: error.message,
         });
       }
@@ -91,7 +93,7 @@ module.exports = {
 
       if (oldUser) {
         return res.status(409).send({
-          success: true,
+          success: false,
           message: "User Already Exist. Please Login",
         });
       }
@@ -105,7 +107,7 @@ module.exports = {
         lastName,
         email: email.toLowerCase(), // sanitize: convert email to lowercase
         password: encryptedPassword,
-        userId: Math.floor((1 + Math.random()) * 0x10000),
+        userId : new mongoose.Types.ObjectId().toString()
       });
 
       res.status(201).send({
@@ -127,9 +129,9 @@ module.exports = {
         We need a little more information to complete your registration, including a confirmation of your email address.
         <br/>
         Click below to confirm your email address:<br/>
-        <a href="http://localhost:8080/verifyEmail?q=${user.userId}" target="_blank"> click here</a>
+        <a href="http://localhost:${process.env.PORT || 8080}/verifyEmail?q=${user.userId}" target="_blank"> click here</a>
         <br/>
-        If you have problems, please paste the above URL into your web browser.`,
+        If you facing any issue related to link, please paste the above URL into your web browser.`,
       };
       await VerificationLinks.create(template);
       commonFunctions.sendEmail(template);
@@ -150,7 +152,7 @@ module.exports = {
     // Validate user input
     if (error) {
         return res.status(400).send({
-          success: true,
+          success: false,
           message: "Bad Request",
         });
       }
