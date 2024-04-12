@@ -1,6 +1,6 @@
 const express = require("express"),
  usersRoute = require('./routes/userRoute'),
- khatabookRoute = require('./routes/khatabookRoute'),
+ businessRoute = require('./routes/businessRoute'),
  userController = require('./controller/userController'),
  app = express();
 
@@ -35,7 +35,7 @@ app.post("/contact-support",userController.contactSuppport);
 // Handle multiple routes like 2FA and User details
 app.use("/user",usersRoute);
 
-app.use("/khatabook",khatabookRoute);
+app.use("/businessRoute",khatabookRoute);
 
 // Home page API
 app.get('/',(req,res)=>{
