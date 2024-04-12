@@ -54,11 +54,11 @@ exports.getUserDetail = async (req, res) => {
         message: "Bad Request",
       });
     }
-    const user = await User.find({userId});
+    const user = await User.findOne({userId});
     if (!user) {
-      return res.status(200).send({ success: true, message: "No User Found" });
+      return res.status(200).send({ success: false, message: "No User Found" });
     }
-    return res.status(200).send({ success: true, message: "User detail found successfully",user });
+    return res.status(200).send({ success: true, message: "User detail found successfully", user });
   } catch (error) {
     return res.status(500).send({ success: false, message: error });
   }

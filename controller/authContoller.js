@@ -3,7 +3,7 @@ const VerificationLinks = require("../model/verificationLinks");
 const otpVerification = require("../model/otpVerification");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken"),
-Joi = require('joi')
+Joi = require('joi');
 const commonFunctions = require("../commonFunctions"),
 mongoose = require('mongoose');
 
@@ -67,7 +67,7 @@ module.exports = {
         message: err,
       });
     }
-    // Our register logic ends here
+    // Our login logic ends here
   },
   register: async (req, res) => {
     try {
@@ -328,7 +328,12 @@ module.exports = {
         success: true,
         message: "Reset you password successfully",
       });
-    } catch (error) {}
+    } catch (error) {
+      return res.status(500).send({
+        success: false,
+        message: error.message,
+      });
+    }
   },
   resendOtp: async (req, res) => {
     try {
