@@ -29,7 +29,7 @@ module.exports = {
             });
         }
     },
-
+    // Create business detail for user you businessName, contactNumber are required field to complete the request
     CreateBussinessDetail: async (req, res) => {
         try {
             const { userId } = req.user;
@@ -66,6 +66,7 @@ module.exports = {
             });
         }
     },
+    // Update business detail records id field is compulasry to complete the request
     updateBussinessDetail: async (req, res) => {
         try {
             // these field are used to update detail businessName, contactNumber, address, businessType, additionalDetail
