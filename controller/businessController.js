@@ -33,7 +33,8 @@ module.exports = {
     CreateBussinessDetail: async (req, res) => {
         try {
             const { userId } = req.user;
-            const { businessName, contactNumber, address, businessType, additionalDetail } = req.body;
+            // these field are used to create the business detail businessName, contactNumber, address, businessType, additionalDetail
+            const { businessName, contactNumber} = req.body;
             if(commonFunctions.checkBlank([businessName,contactNumber])){
                 return res.status(400).send({
                     success: false,
@@ -67,7 +68,8 @@ module.exports = {
     },
     updateBussinessDetail: async (req, res) => {
         try {
-            const { id,businessName, contactNumber, address, businessType, additionalDetail } = req.body;
+            // these field are used to update detail businessName, contactNumber, address, businessType, additionalDetail
+            const { id } = req.body;
             if(commonFunctions.checkBlank([id])){
                 return res.status(400).send({
                     success: false,
