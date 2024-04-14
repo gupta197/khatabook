@@ -42,7 +42,7 @@ module.exports = {
           });
         }
         const token = await jwt.sign(
-          { id: user._id, userId: user.userId },
+          { id: user._id, userId: user.userId, userEmail : email },
           process.env.SECRET_KEY,
           {
             expiresIn: process.env.JWT_EXPIRE,

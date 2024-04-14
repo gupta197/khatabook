@@ -9,10 +9,10 @@ var customerSchema = new Schema({
         type: String,
     },
     customerId: {
-      type: Number,
+      type: String,
     },
     name: {
-      type: String // Credit OR debit
+      type: String 
     },
     contactNumber: {
       type: String
