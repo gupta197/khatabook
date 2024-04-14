@@ -1,13 +1,10 @@
-const User = require("../model/user"),
-    Customer = require('../model/customer'),
-    Transaction = require('../model/transaction'),
-    BussinessDetail = require('../model/businessDetail'),
+const BussinessDetail = require('../model/businessDetail'),
     Joi = require('joi'),
-    commonFunctions = require("../commonFunctions"),
-    mongoose = require('mongoose');
+    commonFunctions = require("../commonFunctions");
 
 
 module.exports = {
+    //Get Business Detail no field required
     getBussinessDetail: async (req, res) => {
         try {
             const { userId } = req.user;
