@@ -6,21 +6,28 @@ Joi = require('joi'),
 commonFunctions = require("../commonFunctions"),
 mongoose = require('mongoose');
 module.exports = {
-    // Get User Customers 
+    // Get User Customers and also we get customer detail in same api
     getCustomers : async (req, res)=>{
         try {
             const { userId } = req.user;
+            let getDetailObj = {
+                userId
+            }
             if (commonFunctions.checkBlank([userId])) {
                 return res.status(400).send({
                     success: false,
                     message: "Bad Request",
                 });
             }
-            const customers = await Customer.findOne({ userId });
-            if (!customers || customers.length == 0) {
-                return res.status(404).send({ success: false, message: "Customer list not found" });
+            // This condition will help to get the user detail in same api
+            if(req.query.id && commonFunctions.checkBlank([req.query.id])){
+                getDetailObj.customerId = req.query.id;
             }
-            return res.status(200).send({ success: true, message: "Customer list Found Successfully", customers });
+            const customers = await Customer.findOne(getDetailObj);
+            if (!customers || customers.length == 0) {
+                return res.status(404).send({ success: false, message: "Customers not found" });
+            }
+            return res.status(200).send({ success: true, message: "Customer  Found Successfully", customers });
         } catch (error) {
             return res.status(500).send({
                 success: false,
@@ -37,7 +44,7 @@ module.exports = {
             if(commonFunctions.checkBlank([name, contactNumber , email])){
                 return res.status(400).send({
                     success: false,
-                    message: "Name, Contact Number and Email are required",
+                    message: "Parameter missing.. !!",
                 });
             }
             let checkCustomer = await Customer.find({email , userId})
@@ -63,24 +70,12 @@ module.exports = {
               });
         }
     },
-    customerDetail : async (req, res)=>{
-        try {
-            return res.status(200).send({
-                success: true,
-                message: "Customer detail Found Successfully!!",
-              });
-        } catch (error) {
-            return res.status(500).send({
-                success: false,
-                message: error.message,
-              });
-        }
-    },
+    // Update customer Detail using this api
     updateCustomerDetails : async (req, res)=>{
         try {
             return res.status(500).send({
                 success: true,
-                message: "customer deleted Successfully",
+                message: "customer Detail Updated Successfully",
               });
         } catch (error) {
             return res.status(500).send({
@@ -89,6 +84,7 @@ module.exports = {
               });
         }
     },
+    // Delete the customer detail
     deleteCustomer : async (req, res)=>{
         try {
             return res.status(500).send({
