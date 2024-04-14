@@ -132,6 +132,7 @@ module.exports = {
                     message: "Customer not found",
                 });
             }
+            // Delete customer 
             await Customer.deleteOne({customerId : id , userId})
             return res.status(200).send({
                 success: true,
