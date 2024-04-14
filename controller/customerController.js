@@ -54,9 +54,11 @@ module.exports = {
                     message: "Customer Already exists!!",
                 });
             }
+            delete req.body.customerId;
+            delete req.body.userId;
             req.body.customerId = new mongoose.Types.ObjectId().toString();
             req.body.userId = userId;
-            let customerRes = await Customer.create(req.body);
+            const customerRes = await Customer.create(req.body);
 
             return res.status(200).send({
                 success: true,
@@ -73,7 +75,31 @@ module.exports = {
     // Update customer Detail using this api
     updateCustomerDetails : async (req, res)=>{
         try {
-            return res.status(500).send({
+            const { userId } = req.user;
+            // these field are used to create the customer id, name, contactNumber , email, address
+            const { id } = req.body;
+            // Check if id is not null or empty
+            if(commonFunctions.checkBlank([id])){
+                return res.status(400).send({
+                    success: false,
+                    message: "Parameter missing.. !!",
+                });
+            }
+            // get if user have customer with respect of id
+            let checkCustomer = await Customer.find({customerId : id , userId})
+            // Check if customer found in database
+            if(checkCustomer && checkCustomer.length == 0){
+                return res.status(400).send({
+                    success: false,
+                    message: "Customer not found",
+                });
+            }
+            // Update customer detail 
+            delete req.body.customerId;
+            delete req.body.userId;
+            delete req.body._id;
+            await Customer.updateOne({customerId : id , userId}, req.body)
+            return res.status(200).send({
                 success: true,
                 message: "customer Detail Updated Successfully",
               });
@@ -87,7 +113,27 @@ module.exports = {
     // Delete the customer detail
     deleteCustomer : async (req, res)=>{
         try {
-            return res.status(500).send({
+            const { userId } = req.user;
+            // these field are used to create the customer id, name, contactNumber , email, address
+            const { id } = req.body;
+            // Check if id is not null or empty
+            if(commonFunctions.checkBlank([id])){
+                return res.status(400).send({
+                    success: false,
+                    message: "Parameter missing.. !!",
+                });
+            }
+            // get if user have customer with respect of id
+            const checkCustomer = await Customer.find({customerId : id , userId})
+            // Check if customer found in database
+            if(checkCustomer && checkCustomer.length == 0){
+                return res.status(400).send({
+                    success: false,
+                    message: "Customer not found",
+                });
+            }
+            await Customer.deleteOne({customerId : id , userId})
+            return res.status(200).send({
                 success: true,
                 message: "customer deleted Successfully",
               });
