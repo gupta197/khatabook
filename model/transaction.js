@@ -9,7 +9,7 @@ var transactionSchema = new Schema({
         type: String,
     },
     transactionId: {
-      type: Number,
+      type: String,
     },
     type: {
       type: String // Credit OR debit
