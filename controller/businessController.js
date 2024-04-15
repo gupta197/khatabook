@@ -18,7 +18,7 @@ module.exports = {
             if (!businessDetail) {
                 return res.status(200).send({ success: false, message: "No Business Detail Found Found" });
             }
-            return res.status(200).send({ success: true, message: "Business detail found successfully", businessDetail });
+            return res.status(200).send({ success: true, message: "Business detail found successfully", records: businessDetail });
         } catch (error) {
             return res.status(500).send({
                 success: false,
@@ -52,7 +52,7 @@ module.exports = {
             return res.status(201).send({
                 success: true,
                 message: "Business Detail Created successfully!!",
-                bussinessDetail
+                records: bussinessDetail
             });
 
 
@@ -88,7 +88,7 @@ module.exports = {
               return res.status(200).send({
                 success: true,
                 message: "Business Detail Updated successfully!!",
-                bussinessDetail
+                records: bussinessDetail
             });
 
         } catch (error) {

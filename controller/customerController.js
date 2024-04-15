@@ -27,7 +27,7 @@ module.exports = {
             if (!customers || customers.length == 0) {
                 return res.status(404).send({ success: false, message: "Customers not found" });
             }
-            return res.status(200).send({ success: true, message: "Customer  Found Successfully", customers });
+            return res.status(200).send({ success: true, message: "Customer  Found Successfully", records: customers });
         } catch (error) {
             return res.status(500).send({
                 success: false,
@@ -63,7 +63,7 @@ module.exports = {
             return res.status(200).send({
                 success: true,
                 message: "New Customer added Successfully!!",
-                customerRes 
+                records: customerRes 
               });
         } catch (error) {
             return res.status(500).send({
@@ -102,6 +102,7 @@ module.exports = {
             return res.status(200).send({
                 success: true,
                 message: "customer Detail Updated Successfully",
+                records: []
               });
         } catch (error) {
             return res.status(500).send({
@@ -137,6 +138,7 @@ module.exports = {
             return res.status(200).send({
                 success: true,
                 message: "customer deleted Successfully",
+                records: []
               });
         } catch (error) {
             return res.status(500).send({
