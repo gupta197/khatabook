@@ -3,12 +3,25 @@ Customer = require('../model/customer'),
 Transaction = require('../model/transaction'),
 BussinessDetail = require('../model/businessDetail'),
 Joi = require('joi'),
-commonFunctions = require("../commonFunctions"),
-mongoose = require('mongoose');
+commonFunctions = require("../commonFunctions");
+
 module.exports = { 
-    getAllTransaction : async (req, res)=>{
+    getTransactions : async (req, res)=>{
         try {
+            return res.status(200).send({
+                success: true,
+                message: "All Transaction Fetched sucessfully",
+              });
+        } catch (error) {
             return res.status(500).send({
+                success: false,
+                message: error.message,
+              });
+        }
+    },
+    createTransaction : async (req, res)=>{
+        try {
+            return res.status(200).send({
                 success: true,
                 message: "New Customer Created",
               });
@@ -18,12 +31,12 @@ module.exports = {
                 message: error.message,
               });
         }
-    },
-    detailCustomer : async (req, res)=>{
+    }, 
+    updateTransaction : async (req, res)=>{
         try {
-            return res.status(500).send({
+            return res.status(200).send({
                 success: true,
-                message: "New Customer Created",
+                message: "update Transaction successfully",
               });
         } catch (error) {
             return res.status(500).send({
@@ -32,9 +45,9 @@ module.exports = {
               });
         }
     },
-    deleteCustomer : async (req, res)=>{
+    deleteTransaction : async (req, res)=>{
         try {
-            return res.status(500).send({
+            return res.status(200).send({
                 success: true,
                 message: "New Customer Created",
               });
