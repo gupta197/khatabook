@@ -43,7 +43,7 @@ app.use("/business",businessRoute);
 // Handle Customer Details
 app.use("/customer",customerRoute);
 
-//
+// Handle User and Customer Transaction
 app.use("/transaction",transactionRoute);
 
 // Home page API

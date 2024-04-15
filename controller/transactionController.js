@@ -23,7 +23,7 @@ module.exports = {
         try {
             return res.status(200).send({
                 success: true,
-                message: "New Customer Created",
+                message: "Transaction Created successfully",
               });
         } catch (error) {
             return res.status(500).send({
@@ -36,7 +36,7 @@ module.exports = {
         try {
             return res.status(200).send({
                 success: true,
-                message: "update Transaction successfully",
+                message: "Transaction update successfully",
               });
         } catch (error) {
             return res.status(500).send({
@@ -49,7 +49,7 @@ module.exports = {
         try {
             return res.status(200).send({
                 success: true,
-                message: "New Customer Created",
+                message: "Transaction Delete Successfully",
               });
         } catch (error) {
             return res.status(500).send({
