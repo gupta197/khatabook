@@ -43,6 +43,8 @@ module.exports = {
             const { userId } = req.user;
             // these field are used to create the customer amount, type , customerId, address
             let { amount, type , customerId} = req.body;
+
+            // Check the type should be credit or debit
             type  = type == "credit" ? "credit" : "debit";
             if(commonFunctions.checkBlank([amount, type , customerId])){
                 return res.status(400).send({
@@ -90,27 +92,39 @@ module.exports = {
             const { userId } = req.user;
             // these field are used to create the customer amount, type , customerId, address
             const { transactionId } = req.body;
+            //Check the Transaction id is not blank
             if(commonFunctions.checkBlank([transactionId])){
+                //Sending the response to End user or requested user
                 return res.status(400).send({
                     success: false,
                     message: "Parameter missing.. !!",
                 });
             }
-            //Check Transaction is exist 
+            //Check Transaction is exist with respect to user, only owner user will get his transaction detail
             const checkTransaction = await Transaction.findOne({transactionId, userId});
+
+            //Check the transaction is present on DB for requested user
             if(checkTransaction && checkTransaction.length == 0){
+
+                //Sending the response to End user or requested user
                 return res.status(400).send({
                     success: false,
                     message: "Customer not found",
                 });
             }
-            // Delete customer 
-            await Transaction.deleteOne({transactionId, userId})
+            // Delete Transaction with respect to user, only owner user will delete his transaction 
+            await Transaction.deleteOne({transactionId, userId});
+
+            //Sending the response to End user or requested user
             return res.status(200).send({
                 success: true,
                 message: "Transaction Delete Successfully",
               });
+
+              //Handle the error
         } catch (error) {
+
+            //Sending the response to End user or requested user
             return res.status(500).send({
                 success: false,
                 message: error.message,
