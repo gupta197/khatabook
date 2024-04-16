@@ -1,7 +1,5 @@
-const User = require("../model/user"),
-Customer = require('../model/customer'),
+const Customer = require('../model/customer'),
 Transaction = require('../model/transaction'),
-BussinessDetail = require('../model/businessDetail'),
 Joi = require('joi'),
 commonFunctions = require("../commonFunctions");
 
@@ -42,9 +40,30 @@ module.exports = {
     },
     createTransaction : async (req, res)=>{
         try {
-            return res.status(200).send({
+            const { userId } = req.user;
+            // these field are used to create the customer amount, type , customerId, address
+            let { amount, type , customerId} = req.body;
+            type  = type == "credit" ? "credit" : "debit";
+            if(commonFunctions.checkBlank([amount, type , customerId])){
+                return res.status(400).send({
+                    success: false,
+                    message: "Parameter missing.. !!",
+                });
+            }
+            let checkCustomer = await Customer.findOne({customerId , userId});
+            if(checkCustomer && checkCustomer.length){
+                req.body.transactionId = new mongoose.Types.ObjectId().toString();
+                req.body.userId = userId;
+                const transactions = await Transaction.create(req.body);
+                res.status(200).send({
+                    success: true,
+                    message: "Transaction Created successfully",
+                    transactions
+                  });
+            }
+            return res.status(400).send({
                 success: true,
-                message: "Transaction Created successfully",
+                message: "Customer not found!!",
               });
         } catch (error) {
             return res.status(500).send({

@@ -11,8 +11,11 @@ var transactionSchema = new Schema({
     transactionId: {
       type: String,
     },
+    userId: {
+      type: String,
+    },
     type: {
-      type: String // Credit OR debit
+      type: String // credit OR debit
     },
     amount: {
       type: String
