@@ -87,6 +87,25 @@ module.exports = {
     },
     deleteTransaction : async (req, res)=>{
         try {
+            const { userId } = req.user;
+            // these field are used to create the customer amount, type , customerId, address
+            const { transactionId } = req.body;
+            if(commonFunctions.checkBlank([transactionId])){
+                return res.status(400).send({
+                    success: false,
+                    message: "Parameter missing.. !!",
+                });
+            }
+            //Check Transaction is exist 
+            const checkTransaction = await Transaction.findOne({transactionId, userId});
+            if(checkTransaction && checkTransaction.length == 0){
+                return res.status(400).send({
+                    success: false,
+                    message: "Customer not found",
+                });
+            }
+            // Delete customer 
+            await Transaction.deleteOne({transactionId, userId})
             return res.status(200).send({
                 success: true,
                 message: "Transaction Delete Successfully",
