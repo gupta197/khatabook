@@ -4,6 +4,7 @@ Joi = require('joi'),
 commonFunctions = require("../commonFunctions");
 
 module.exports = { 
+    // Get all transaction with respect to user and get transaction detail
     getTransactions : async (req, res)=>{
         try {
             const { userId } = req.user;
@@ -38,6 +39,7 @@ module.exports = {
               });
         }
     },
+    // Generate new Transaction with respect to user
     createTransaction : async (req, res)=>{
         try {
             const { userId } = req.user;
