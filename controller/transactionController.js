@@ -39,6 +39,7 @@ module.exports = {
               });
         }
     },
+
     // Generate new Transaction with respect to user
     createTransaction : async (req, res)=>{
         try {
@@ -78,11 +79,47 @@ module.exports = {
     }, 
     updateTransaction : async (req, res)=>{
         try {
+            const { userId } = req.user;
+            // these field are used to create the customer amount, type , customerId, address
+            let { transactionId } = req.body;
+            // Check if user will not update the to credit ot debit
+            req.body.type ? req.body.type != "credit" ? req.body.type = "debit" : req.body.type = "credit" :  null ;
+            //Check the Transaction id is not blank
+            if(commonFunctions.checkBlank([transactionId])){
+
+                //Sending the response to End user or requested user
+                return res.status(400).send({
+                    success: false,
+                    message: "Parameter missing.. !!",
+                });
+            }
+            //Check Transaction is exist with respect to user, only owner user will get his transaction detail
+            let checkCustomer = await Transaction.find({transactionId, userId});
+
+            //Check the transaction is present on DB for requested user
+            if(checkCustomer && checkCustomer.length == 0){
+                return res.status(400).send({
+                    success: false,
+                    message: "Transaction not found",
+                });
+            }
+
+            // Update Transactions detail 
+            delete req.body.customerId;
+            delete req.body.userId;
+            delete req.body._id;
+
+            // Delete Transaction with respect to user, only owner user will delete his transaction 
+            await Transaction.updateOne({transactionId }, req.body);
+
+            //Sending the response to End user or requested user
             return res.status(200).send({
                 success: true,
                 message: "Transaction update successfully",
               });
+              
         } catch (error) {
+            //Sending the response to End user or requested user
             return res.status(500).send({
                 success: false,
                 message: error.message,
@@ -111,7 +148,7 @@ module.exports = {
                 //Sending the response to End user or requested user
                 return res.status(400).send({
                     success: false,
-                    message: "Customer not found",
+                    message: "Transaction not found",
                 });
             }
             // Delete Transaction with respect to user, only owner user will delete his transaction 
