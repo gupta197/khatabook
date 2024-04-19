@@ -4,10 +4,13 @@ const path = require('path');
 module.exports.options = {
     swaggerDefinition: {
       info: {
-        title: "My API",
+        title: "Khatabook API",
         version: "1.0.0",
-        description: "My API for doing cool stuff!",
+        description: "Khatabook api for  practise",
       },
     },
-    apis: [path.join(__dirname, "/routes/*.js")],
+    apis: [
+        path.join(__dirname, "/routes/*.js"),
+        path.join(__dirname, "app.js"),
+    ],
   };
