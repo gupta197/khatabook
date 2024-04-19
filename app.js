@@ -5,6 +5,11 @@ const express = require("express"),
  transactionRoute = require('./routes/transactionRoute'),
  userController = require('./controller/userController'),
  app = express();
+ //Swagger Route
+ const swaggerJsdoc = require("swagger-jsdoc");
+ const swaggerUi = require("swagger-ui-express");
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
@@ -14,6 +19,8 @@ const auth = require('./controller/authContoller')
 
 // Register
 app.post("/register", auth.register);
+
+
 
 // Login and setup 2 factor authication
 app.post("/login",auth.login);
@@ -46,10 +53,17 @@ app.use("/customer",customerRoute);
 // Handle User and Customer Transaction
 app.use("/transaction",transactionRoute);
 
+
+
 // Home page API
 app.get('/',(req,res)=>{
     res.send("Welcome to Khatabook")
 })
+const {options} = require('./swagger');
+//Swagger Route
+var swaggerSpecs = swaggerJsdoc(options);
+
+app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 //No Page API
 app.get('**',(req,res)=>{
     res.send("Page Not Found!")
