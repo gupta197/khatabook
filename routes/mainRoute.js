@@ -6,6 +6,45 @@ transactionRoute = require('./transactionRoute'),
 userController = require('../controller/userController'),
 auth = require('../controller/authContoller');
 
+/**
+ * @swagger
+ * /register:
+ *   post:
+ *     description: Signup to the application
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: firstName
+ *         description: User firstName to use for signup.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: lastName
+ *         description: User lastName use for signup.
+ *         in: formData
+ *         required: false
+ *         type: string
+ *       - name: email
+ *         description: User Email use for signup.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: password
+ *         description: User password use for signup.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *     responses:
+ *       201:
+ *         description: User registered successfully, Please verify your email!!
+ *       400:
+ *         description: login
+ *       409:
+ *         description: User Already Exist. Please Login
+ *       500:
+ *         description: login
+ */
+
 // Register
 router.post("/register", auth.register);
 
@@ -17,8 +56,8 @@ router.post("/register", auth.register);
  *     produces:
  *       - application/json
  *     parameters:
- *       - name: username
- *         description: Username to use for login.
+ *       - name: email
+ *         description: email to use for login.
  *         in: formData
  *         required: true
  *         type: string
@@ -29,6 +68,10 @@ router.post("/register", auth.register);
  *         type: string
  *     responses:
  *       200:
+ *         description: login
+ *       400:
+ *         description: login
+ *       500:
  *         description: login
  */
 // Login and setup 2 factor authication
