@@ -103,6 +103,28 @@ router.post("/login",auth.login);
 // Verify Email
 router.get("/verifyEmail",auth.verifyEmail);
 
+
+/**
+ * @swagger
+ * /forgetPassword:
+ *   post:
+ *     description: api to help the user to recover the password
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: email
+ *         description: User email to use for forget password api.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: Reset Password email send to register email. Please check email
+ *       400:
+ *         description: Bad Request 
+ *       500:
+ *         description: server error
+ */
 // Forget Password
 router.post("/forgetPassword",auth.forgetPassword);
 
