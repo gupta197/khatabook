@@ -163,7 +163,7 @@ module.exports = {
           message: "no user found with such email!!!",
         });
       } else if (userData && userData.isVerified) {
-        return res.status(400).send({
+        return res.status(409).send({
           success: false,
           message: "User Already verified. please login",
         });
@@ -176,7 +176,7 @@ module.exports = {
           }
         );
         await VerificationLinks.deleteOne({ userId: userId });
-        return res.status(201).send({
+        return res.status(200).send({
           success: true,
           message: "User verified successfully, Please login!!",
         });

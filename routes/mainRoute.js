@@ -77,6 +77,29 @@ router.post("/register", auth.register);
 // Login and setup 2 factor authication
 router.post("/login",auth.login);
 
+/**
+ * @swagger
+ * /verifyEmail:
+ *   get:
+ *     description: Verfiy the user Email
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: q
+ *         description: User id to use for verifyEmail.
+ *         in: query
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: User verified successfully, Please login!!
+ *       400:
+ *         description: Bad Request , no user found with such email!!!
+ *       409:
+ *         description: User Already verified. please login
+ *       500:
+ *         description: server error
+ */
 // Verify Email
 router.get("/verifyEmail",auth.verifyEmail);
 
