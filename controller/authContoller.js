@@ -201,6 +201,7 @@ module.exports = {
       if (userdetail) {
         let verificationToken =
           commonFunctions.generateRandomStringAndNumbers(15);
+          console.log(`http://localhost:8080/resetPassword/${userdetail.userId}/${verificationToken}`)
         let template = {
           link: verificationToken,
           userId: userdetail.userId,
@@ -293,7 +294,7 @@ module.exports = {
       }
       const userDetail = await User.findOne({ userId: id });
       if (!userDetail) {
-        return res.status(400).send({
+        return res.status(404).send({
           success: false,
           message: "User not found",
         });

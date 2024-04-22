@@ -103,7 +103,6 @@ router.post("/login",auth.login);
 // Verify Email
 router.get("/verifyEmail",auth.verifyEmail);
 
-
 /**
  * @swagger
  * /forgetPassword:
@@ -127,6 +126,40 @@ router.get("/verifyEmail",auth.verifyEmail);
  */
 // Forget Password
 router.post("/forgetPassword",auth.forgetPassword);
+
+/**
+ * @swagger
+ * /resetPassword/{id}/{token}:
+ *   post:
+ *     description: api to help the user to recover the password
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: id
+ *         description: User id to use for recover the password.
+ *         in: path
+ *         required: true
+ *         type: string
+ *       - name: token
+ *         description: reset token help the user to recover the password.
+ *         in: path
+ *         required: true
+ *         type: string
+ *       - name: password
+ *         description: create new password.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: Reset you password successfully
+ *       400:
+ *         description: Bad Request / Link expired or User Not Found!
+ *       404:
+ *         description: User not found 
+ *       500:
+ *         description: server error
+ */
 
 // Reset Passwords
 router.post("/resetPassword/:id/:token",auth.resetPassword);
