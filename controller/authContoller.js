@@ -391,9 +391,6 @@ module.exports = {
         ) > 1
           ? true
           : false;
-      console.log(
-        commonFunctions.get_time_diff(new Date(), otpDetail.updateAt, "minutes")
-      );
       if (isExpired || otpDetail.otp != otp) {
         await otpVerification.updateOne(
           { userId: userId },
@@ -408,7 +405,7 @@ module.exports = {
       }
       await otpVerification.deleteOne({ userId: userId });
       if (req.user) {
-        return res.status(400).send({
+        return res.status(200).send({
           success: false,
           message: "OTP Verified successfully",
         });
@@ -429,7 +426,7 @@ module.exports = {
           token,
         });
       }
-      return res.status(400).send({
+      return res.status(404).send({
         success: false,
         message: "User Not Found",
       });

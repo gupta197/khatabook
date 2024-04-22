@@ -163,6 +163,34 @@ router.post("/forgetPassword",auth.forgetPassword);
 
 // Reset Passwords
 router.post("/resetPassword/:id/:token",auth.resetPassword);
+/**
+ * @swagger
+ * /verifyOTP:
+ *   post:
+ *     description: api to help the user to recover the password
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: userId
+ *         description: User id to use to verify the otp.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: otp
+ *         description: otp that need to verify otp
+ *         in: formData
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: Reset you password successfully
+ *       400:
+ *         description: Bad Request / User Not Found / OTP expired! / OTP not valid, Please try again!! / OTP verify exceeded!
+ *       404:
+ *         description: User not found 
+ *       500:
+ *         description: server error
+ */
 // OTP verification
 router.post("/verifyOTP",auth.verifyOTP);
 //otp share
