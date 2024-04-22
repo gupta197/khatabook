@@ -168,6 +168,48 @@ router.post("/verifyOTP",auth.verifyOTP);
 //otp share
 router.post("/resendOtp",auth.resendOtp);
 
+/**
+ * @swagger
+ * /contact-support:
+ *   post:
+ *     description: contact support api to help user to send his feedback
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: firstName
+ *         description: First name of user.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: lastName
+ *         description: Last Name of user.
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: message
+ *         description: Message to send to user
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: email
+ *         description: email to send to user
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: phone
+ *         description: phone to send to user
+ *         in: formData
+ *         required: false
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: email Sent to user.
+ *       400:
+ *         description: Bad Request
+ *       500:
+ *         description: Something went wrong!...
+ */
+
 //Contact Support API
 router.post("/contact-support",userController.contactSuppport);
 
