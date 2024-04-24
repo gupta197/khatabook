@@ -56,7 +56,7 @@ exports.getUserDetail = async (req, res) => {
     }
     const user = await User.findOne({userId});
     if (!user) {
-      return res.status(200).send({ success: false, message: "No User Found" });
+      return res.status(404).send({ success: false, message: "No User Found" });
     }
     return res.status(200).send({ success: true, message: "User detail found successfully", user });
   } catch (error) {

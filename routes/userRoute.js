@@ -31,6 +31,29 @@ const auth = require("../middleware/auth");
 
 // Enable and disble the 2fA
 router.post('/2fa',auth,setup2fa);
+/**
+ * @swagger
+ * /user:
+ *   get:
+ *     description: API is use to enable/disbale the 2 factor authication
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: x-access-token
+ *         description: an authorization header
+ *         in: header
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: User detail found successfully
+ *       4040:
+ *         description: Bad Request 
+ *       404:
+ *         description: No User Found
+ *       500:
+ *         description: Something went wrong!...
+ */
 // Get User Detail
 router.get('/',auth,getUserDetail);
 
