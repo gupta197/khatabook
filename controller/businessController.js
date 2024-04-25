@@ -76,7 +76,7 @@ module.exports = {
             }
             const oldDetails = await BussinessDetail.findOne({ _id : id });
             if(!oldDetails){
-                return res.status(409).send({
+                return res.status(404).send({
                     success: false,
                     message: "Bussiness Detail Not Exist. ",
                 });

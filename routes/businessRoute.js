@@ -41,6 +41,31 @@ router.get('/',auth, businessControllerController.getBussinessDetail);
  *         in: header
  *         required: true
  *         type: string
+ *       - name: businessName
+ *         description: an authorization header
+ *         in: header
+ *         required: true
+ *         type: string
+ *       - name: contactNumber
+ *         description: user Contact Number
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: address
+ *         description: User Address
+ *         in: formData
+ *         required: false
+ *         type: string
+*       - name: businessType
+ *         description: Business type for example salesman, employee, employer, businessma, etc.
+ *         in: formData
+ *         required: false
+ *         type: string
+ *       - name: additionalDetail
+ *         description: Some addition detail about user
+ *         in: formData
+ *         required: false
+ *         type: string 
  *     responses:
  *       201:
  *         description: Business Detail Created successfully!!
@@ -54,6 +79,55 @@ router.get('/',auth, businessControllerController.getBussinessDetail);
 
 // Create business detail for user you businessName, contactNumber are required field to complete the request
 router.post('/',auth, businessControllerController.CreateBussinessDetail);
+
+/**
+* @swagger
+* /business:
+*   put:
+*     description: API is use to update the business detail
+*     produces:
+*       - application/json
+*     parameters:
+*       - name: x-access-token
+*         description: an authorization header
+*         in: header
+*         required: true
+*         type: string
+*       - name: businessName
+*         description: updated Business detail
+*         in: header
+*         required: false
+*         type: string
+*       - name: contactNumber
+*         description: Updated contact number of user
+*         in: formData
+*         required: false
+*         type: string
+*       - name: address
+*         description: updated  user address
+*         in: formData
+*         required: false
+*         type: string
+*       - name: businessType
+*         description: update business type
+*         in: formData
+*         required: false
+*         type: string
+*       - name: additionalDetail
+*         description: Update additional detil
+*         in: formData
+*         required: false
+*         type: string 
+*     responses:
+*       200:
+*         description: Business Detail Updated successfully!!
+*       400:
+*         description: Bad Request 
+*       404:
+*         description:Bussiness Detail Not Exist.
+*       500:
+*         description: Something went wrong!...
+*/ 
 
 // Update business Detail id field are compulasry to update the records
 router.put('/',auth, businessControllerController.updateBussinessDetail);
