@@ -16,7 +16,7 @@ module.exports = {
             }
             const businessDetail = await BussinessDetail.findOne({ userId });
             if (!businessDetail) {
-                return res.status(200).send({ success: false, message: "No Business Detail Found Found" });
+                return res.status(404).send({ success: false, message: "No Business Detail Found Found" });
             }
             return res.status(200).send({ success: true, message: "Business detail found successfully", records: businessDetail });
         } catch (error) {
