@@ -43,7 +43,34 @@ router.post('/',auth, customerController.addNewCustomer);
 // Update Customer Detail
 router.put('/',auth, customerController.updateCustomerDetails);
 
-
+/**
+* @swagger
+* /customer:
+*   delete:
+*     description: API is use to delete the customer detail
+*     produces:
+*       - application/json
+*     parameters:
+*       - name: x-access-token
+*         description: an authorization header
+*         in: header
+*         required: true
+*         type: string
+*       - name: id
+*         description: customer id
+*         in: formData
+*         required: true
+*         type: string
+*     responses:
+*       200:
+*         description: Customer deleted Successfully
+*       400:
+*         description: Parameter missing.. !!
+*       404:
+*         description: Customer not found
+*       500:
+*         description: Something went wrong!...
+*/
 //Delete Customer
 router.delete('/',auth, customerController.deleteCustomer);
 
