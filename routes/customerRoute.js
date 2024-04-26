@@ -71,7 +71,9 @@ router.get('/',auth, customerController.getCustomers);
  *       201:
  *         description: New Customer added Successfully!!
  *       400:
- *         description: Parameter missing.. !! / Customer Already exists!! 
+ *         description: Parameter missing.. !!
+ *       409:
+ *         description: Customer Already exists!! 
  *       500:
  *         description: Something went wrong!...
  */ 
@@ -79,7 +81,54 @@ router.get('/',auth, customerController.getCustomers);
 //Create new Customer with respect to user
 router.post('/',auth, customerController.addNewCustomer);
 
-
+/**
+ * @swagger
+ * /customer:
+ *   put:
+ *     description: API is use to update the customer detail
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: x-access-token
+ *         description: an authorization header
+ *         in: header
+ *         required: true
+ *         type: string
+ *       - name: id
+ *         description: id of the customer
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: name
+ *         description: Name of the customer
+ *         in: formData
+ *         required: false
+ *         type: string
+ *       - name: contactNumber
+ *         description: customer Contact Number
+ *         in: formData
+ *         required: false
+ *         type: string
+ *       - name: email
+ *         description: Customer email
+ *         in: formData
+ *         required: false
+ *         type: string
+ *       - name: address
+ *         description: Customer addess is not required
+ *         in: formData
+ *         required: false
+ *         type: string 
+ *     responses:
+ *       200:
+ *         description: Customer Detail Updated Successfully
+ *       400:
+ *         description: Parameter missing.. !! / Customer Already exists!! 
+ *       404:
+ *         description: Customer not found
+ *       500:
+ *         description: Something went wrong!...
+ */ 
 
 // Update Customer Detail
 router.put('/',auth, customerController.updateCustomerDetails);

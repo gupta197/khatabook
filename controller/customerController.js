@@ -49,7 +49,7 @@ module.exports = {
             }
             let checkCustomer = await Customer.find({email , userId})
             if(checkCustomer && checkCustomer.length){
-                return res.status(400).send({
+                return res.status(409).send({
                     success: false,
                     message: "Customer Already exists!!",
                 });
@@ -89,7 +89,7 @@ module.exports = {
             let checkCustomer = await Customer.find({customerId : id , userId})
             // Check if customer found in database
             if(checkCustomer && checkCustomer.length == 0){
-                return res.status(400).send({
+                return res.status(404).send({
                     success: false,
                     message: "Customer not found",
                 });
@@ -101,7 +101,7 @@ module.exports = {
             await Customer.updateOne({customerId : id , userId}, req.body)
             return res.status(200).send({
                 success: true,
-                message: "customer Detail Updated Successfully",
+                message: "Customer Detail Updated Successfully",
                 records: []
               });
         } catch (error) {
