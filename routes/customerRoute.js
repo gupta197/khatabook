@@ -34,6 +34,47 @@ customerController = require('../controller/customerController'),
 // Get All Customers or get Customer Details 
 router.get('/',auth, customerController.getCustomers);
 
+/**
+ * @swagger
+ * /customer:
+ *   post:
+ *     description: API is use to create the customer detail
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: x-access-token
+ *         description: an authorization header
+ *         in: header
+ *         required: true
+ *         type: string
+ *       - name: name
+ *         description: Name of the customer
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: contactNumber
+ *         description: customer Contact Number
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: email
+ *         description: Customer email
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: address
+ *         description: Customer addess is not required
+ *         in: formData
+ *         required: false
+ *         type: string 
+ *     responses:
+ *       201:
+ *         description: New Customer added Successfully!!
+ *       400:
+ *         description: Parameter missing.. !! / Customer Already exists!! 
+ *       500:
+ *         description: Something went wrong!...
+ */ 
 
 //Create new Customer with respect to user
 router.post('/',auth, customerController.addNewCustomer);

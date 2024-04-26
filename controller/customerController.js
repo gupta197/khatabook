@@ -60,7 +60,7 @@ module.exports = {
             req.body.userId = userId;
             const customerRes = await Customer.create(req.body);
 
-            return res.status(200).send({
+            return res.status(201).send({
                 success: true,
                 message: "New Customer added Successfully!!",
                 records: customerRes 
@@ -137,7 +137,7 @@ module.exports = {
             await Customer.deleteOne({customerId : id , userId})
             return res.status(200).send({
                 success: true,
-                message: "customer deleted Successfully",
+                message: "Customer deleted Successfully",
                 records: []
               });
         } catch (error) {
