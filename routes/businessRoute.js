@@ -42,8 +42,8 @@ router.get('/',auth, businessControllerController.getBussinessDetail);
  *         required: true
  *         type: string
  *       - name: businessName
- *         description: an authorization header
- *         in: header
+ *         description: Business name of user
+ *         in: formData
  *         required: true
  *         type: string
  *       - name: contactNumber
@@ -56,7 +56,7 @@ router.get('/',auth, businessControllerController.getBussinessDetail);
  *         in: formData
  *         required: false
  *         type: string
-*       - name: businessType
+ *       - name: businessType
  *         description: Business type for example salesman, employee, employer, businessma, etc.
  *         in: formData
  *         required: false
@@ -93,9 +93,14 @@ router.post('/',auth, businessControllerController.CreateBussinessDetail);
 *         in: header
 *         required: true
 *         type: string
+*       - name: id
+*         description: business detail id
+*         in: formData
+*         required: true
+*         type: string
 *       - name: businessName
 *         description: updated Business detail
-*         in: header
+*         in: formData
 *         required: false
 *         type: string
 *       - name: contactNumber

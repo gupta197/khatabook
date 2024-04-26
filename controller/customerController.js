@@ -27,7 +27,7 @@ module.exports = {
             if (!customers || customers.length == 0) {
                 return res.status(404).send({ success: false, message: "Customers not found" });
             }
-            return res.status(200).send({ success: true, message: "Customer  Found Successfully", records: customers });
+            return res.status(200).send({ success: true, message: "Customer found Successfully", records: customers });
         } catch (error) {
             return res.status(500).send({
                 success: false,
