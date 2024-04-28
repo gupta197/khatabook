@@ -79,13 +79,13 @@ module.exports = {
                 // Create new Transaction
                 const transactions = await Transaction.create(req.body);
                 //send Response to end user
-                res.status(200).send({
+                res.status(201).send({
                     success: true,
                     message: "Transaction Created successfully",
                     transactions
                   });
             }
-            return res.status(400).send({
+            return res.status(404).send({
                 success: true,
                 message: "Customer not found!!",
               });
