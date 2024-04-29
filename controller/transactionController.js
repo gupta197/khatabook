@@ -171,7 +171,7 @@ module.exports = {
             if(checkTransaction && checkTransaction.length == 0){
 
                 //Sending the response to End user or requested user
-                return res.status(400).send({
+                return res.status(404).send({
                     success: false,
                     message: "Transaction not found",
                 });

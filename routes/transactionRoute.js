@@ -87,6 +87,34 @@ router.get('/',auth, transactionController.getTransactions);
 // Update transaction 
 router.put('/',auth, transactionController.updateTransaction);
 
+/**
+* @swagger
+* /transaction:
+*   delete:
+*     description: API is use to delete the transaction detail
+*     produces:
+*       - application/json
+*     parameters:
+*       - name: x-access-token
+*         description: an authorization header
+*         in: header
+*         required: true
+*         type: string
+*       - name: transactionId
+*         description: Transaction id
+*         in: formData
+*         required: true
+*         type: string
+*     responses:
+*       200:
+*         description: Transaction Delete Successfully
+*       400:
+*         description: Parameter missing.. !!
+*       404:
+*         description: Transaction not found
+*       500:
+*         description: Something went wrong!...
+*/
 //Delete Transaction
 router.delete('/',auth, transactionController.deleteTransaction);
 
