@@ -7,6 +7,15 @@ module.exports.options = {
         title: "Khatabook API",
         version: "1.0.0",
         description: "Khatabook api for  practise",
+        license: {
+          name: "MIT",
+          url: "https://github.com/gupta197",
+        },
+        contact: {
+          name: "Vikas Gupta",
+          url: "https://github.com/gupta197",
+          email: "vikasgupta1097@gmail.com",
+        },
       },
     },
     apis: [
