@@ -4,9 +4,13 @@ transactionController = require('../controller/transactionController'),
 
 /**
  * @swagger
+ * tags:
+ *   name: Transaction
+ *   description: Transaction Management
  * /transaction:
  *   post:
  *     description: API is use to create the transaction
+ *     tags: [Transaction]
  *     produces:
  *       - application/json
  *     parameters:
@@ -50,9 +54,13 @@ router.post('/',auth, transactionController.createTransaction);
 
 /**
  * @swagger
+ * tags:
+ *   name: Transaction
+ *   description: Transaction Management
  * /transaction:
  *   get:
  *     description: API is use to get the all transaction and transaction detail
+ *     tags: [Transaction]
  *     produces:
  *       - application/json
  *     parameters:
@@ -84,14 +92,65 @@ router.post('/',auth, transactionController.createTransaction);
 // Get All transaction or get particular transaction
 router.get('/',auth, transactionController.getTransactions);
 
+/**
+ * @swagger
+ * tags:
+ *   name: Transaction
+ *   description: Transaction Management
+ * /transaction:
+ *   put:
+ *     description: API is use to update the transaction detail
+ *     tags: [Transaction]
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: x-access-token
+ *         description: an authorization header
+ *         in: header
+ *         required: true
+ *         type: string
+ *       - name: id
+ *         description: id of the transaction
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: amount
+ *         description: Amount
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: type
+ *         description: transaction type should be debit or credit
+ *         in: formData
+ *         required: true
+ *         type: string
+ *       - name: description
+ *         description: transaction description
+ *         in: formData
+ *         required: false
+ *         type: string 
+ *     responses:
+ *       200:
+ *         description: Transaction update successfully
+ *       400:
+ *         description: Parameter missing.. !! / Customer Already exists!! 
+ *       404:
+ *         description: Transaction not found
+ *       500:
+ *         description: Something went wrong!...
+ */ 
 // Update transaction 
 router.put('/',auth, transactionController.updateTransaction);
 
 /**
 * @swagger
+* tags:
+*   name: Transaction
+*   description: Transaction Management
 * /transaction:
 *   delete:
 *     description: API is use to delete the transaction detail
+*     tags: [Transaction]
 *     produces:
 *       - application/json
 *     parameters:

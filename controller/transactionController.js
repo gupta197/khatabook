@@ -120,7 +120,7 @@ module.exports = {
 
             //Check the transaction is present on DB for requested user
             if(checkCustomer && checkCustomer.length == 0){
-                return res.status(400).send({
+                return res.status(404).send({
                     success: false,
                     message: "Transaction not found",
                 });
