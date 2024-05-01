@@ -4,9 +4,13 @@ const router = require('express').Router(),
 
 /**
  * @swagger
+ * tags:
+ *   name: Business
+ *   description: Business Management
  * /business:
  *   get:
  *     description: API is use to get the business detail
+ *     tags: [Business]
  *     produces:
  *       - application/json
  *     parameters:
@@ -30,9 +34,13 @@ router.get('/',auth, businessControllerController.getBussinessDetail);
 
 /**
  * @swagger
+ * tags:
+ *   name: Business
+ *   description: Business Management
  * /business:
  *   post:
  *     description: API is use to create the business detail
+ *     tags: [Business]
  *     produces:
  *       - application/json
  *     parameters:
@@ -82,9 +90,13 @@ router.post('/',auth, businessControllerController.CreateBussinessDetail);
 
 /**
 * @swagger
+* tags:
+*   name: Business
+*   description: Business Management
 * /business:
 *   put:
 *     description: API is use to update the business detail
+*     tags: [Business]
 *     produces:
 *       - application/json
 *     parameters:

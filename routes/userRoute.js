@@ -4,9 +4,13 @@ const auth = require("../middleware/auth");
 
 /**
  * @swagger
+ * tags:
+ *   name: User
+ *   description: User Management
  * /user/2fa:
  *   post:
  *     description: API is use to enable/disbale the 2 factor authication
+ *     tags: [User]
  *     produces:
  *       - application/json
  *     parameters:
@@ -33,9 +37,13 @@ const auth = require("../middleware/auth");
 router.post('/2fa',auth,setup2fa);
 /**
  * @swagger
+ * tags:
+ *   name: User
+ *   description: User Management
  * /user:
  *   get:
  *     description: API is use to enable/disbale the 2 factor authication
+ *     tags: [User]
  *     produces:
  *       - application/json
  *     parameters:

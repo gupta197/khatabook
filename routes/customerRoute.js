@@ -4,9 +4,13 @@ customerController = require('../controller/customerController'),
 
  /**
  * @swagger
+ * tags:
+ *   name: Customer
+ *   description: Customer Management
  * /customer:
  *   get:
  *     description: API is use to get the all customers and customer detail
+ *     tags: [Customer]
  *     produces:
  *       - application/json
  *     parameters:
@@ -36,9 +40,13 @@ router.get('/',auth, customerController.getCustomers);
 
 /**
  * @swagger
+ * tags:
+ *   name: Customer
+ *   description: Customer Management
  * /customer:
  *   post:
  *     description: API is use to create the customer detail
+ *     tags: [Customer]
  *     produces:
  *       - application/json
  *     parameters:
@@ -83,9 +91,13 @@ router.post('/',auth, customerController.addNewCustomer);
 
 /**
  * @swagger
+ * tags:
+ *   name: Customer
+ *   description: Customer Management
  * /customer:
  *   put:
  *     description: API is use to update the customer detail
+ *     tags: [Customer]
  *     produces:
  *       - application/json
  *     parameters:
@@ -135,9 +147,13 @@ router.put('/',auth, customerController.updateCustomerDetails);
 
 /**
 * @swagger
+* tags:
+*   name: Customer
+*   description: Customer Management
 * /customer:
 *   delete:
 *     description: API is use to delete the customer detail
+*     tags: [Customer]
 *     produces:
 *       - application/json
 *     parameters:
