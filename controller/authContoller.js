@@ -12,16 +12,11 @@ module.exports = {
     try {
       // Get user input
       const { email, password } = req.body;
-      const schema = Joi.object({
-          email: Joi.string().email().required(),
-          password: Joi.string().required()
-      });
-      const { error } = schema.validate(req.body);
-      // Validate user input
-      if (error) {
+      let checkValidate = commonFunctions.validatioReqBody(req, "login");
+      if (checkValidate !== true) {
         return res.status(400).send({
           success: false,
-          message: error.message,
+          message: checkValidate,
         });
       }
       // Validate if user exist in our database
@@ -73,19 +68,13 @@ module.exports = {
     try {
       // Get user input
       const { firstName, lastName, email, password } = req.body;
-      const schema = Joi.object({
-        email: Joi.string().email().required(),
-        firstName: Joi.string().required(),
-        lastName: Joi.string(),
-        password: Joi.string().required()
-    });
-    const { error } = schema.validate(req.body);
-      if (error) {
-        return res.status(400).send({
-          success: false,
-          message: error.message,
-        });
-      }
+      let checkValidate = commonFunctions.validatioReqBody(req, "register");
+        if (checkValidate !== true) {
+          return res.status(400).send({
+            success: false,
+            message: checkValidate,
+          });
+        }
 
       // check if user already exist
       // Validate if user exist in our database
@@ -145,17 +134,16 @@ module.exports = {
   verifyEmail: async (req, res) => {
     try {
       const userId = req.query.q;
-      const schema = Joi.object({
-        userId: Joi.string().required()
-    });
-    const { error } = schema.validate({userId : req.query.q});
-    // Validate user input
-    if (error) {
+      req.body.userId = userId;
+      let checkValidate = commonFunctions.validatioReqBody(req, "userId");
+      // Validate user input
+      if (checkValidate !== true) {
         return res.status(400).send({
           success: false,
           message: "Bad Request",
         });
       }
+    
       const userData = await User.findOne({ userId: userId });
       if (!userData) {
         return res.status(400).send({

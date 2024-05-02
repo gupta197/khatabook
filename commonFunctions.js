@@ -1,6 +1,7 @@
-const request = require("request");
-const moment = require('moment');
-const sgMail = require("@sendgrid/mail");
+const request = require("request"),
+ moment = require('moment'),
+ sgMail = require("@sendgrid/mail"),
+ Joi = require('joi');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 exports.checkBlank = function (arr) {
@@ -105,3 +106,88 @@ exports.get_time_diff = function (startdate, endDate, returnType) {
     // Return type should be 'minutes','days','weeks','hours'
   return startdate.diff(endDate, returnType)
 };
+
+module.exports.validatioReqBody = (req, data) => {
+  let schema;
+  switch (data) {
+      case "login":
+          schema = Joi.object({
+              email: Joi.string().email().required(),
+              password: Joi.string().required()
+          }).unknown();
+          break;
+      case "register":
+          schema = Joi.object({
+            email: Joi.string().email().required(),
+            firstName: Joi.string().required(),
+            lastName: Joi.string(),
+            password: Joi.string().required()
+          }).unknown();
+
+          break;
+      case "CreateBussinessDetail":
+          schema = Joi.object({
+            businessName: Joi.string().required(),
+            contactNumber: Joi.string().required(),
+            address: Joi.string(),
+            businessType: Joi.string(),
+            additionalDetail: Joi.string()
+          }).unknown();
+          break;
+      case "updateBussinessDetail":
+          schema = Joi.object({
+            id: Joi.string().required(),
+            businessName: Joi.string(),
+            contactNumber: Joi.string(),
+            address: Joi.string(),
+            businessType: Joi.string(),
+            additionalDetail: Joi.string()
+          }).unknown();
+          break;
+      case "changePassword":
+          schema = Joi.object({
+              currentPassword: Joi.string().required(),
+              newPassword: Joi.string().required()
+          }).unknown();
+          break;
+      case "changePassword":
+        schema = Joi.object({
+            currentPassword: Joi.string().required(),
+            newPassword: Joi.string().required()
+        }).unknown();
+        break;
+      case "deleteUser":
+          schema = Joi.object({
+              password: Joi.string().required()
+          }).unknown();
+          break;
+
+      case "userId":
+          schema = Joi.object({
+            userId: Joi.string().required(),
+          }).unknown();
+        break;
+        case "id":
+          schema = Joi.object({
+            userId: Joi.string().required(),
+          }).unknown();
+        break;
+        
+      case "updatePost":
+          schema = Joi.object({
+              id: Joi.string().required(),
+              title: Joi.string().required(),
+              content: Joi.string().required()
+          }).unknown();
+          break;
+
+      default:
+          break;
+  }
+  const { error } = schema.validate(req.body);
+  // Validate user input
+  if (error) {
+      return error.details[0].message;
+  }
+  return true;
+}
