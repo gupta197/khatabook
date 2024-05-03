@@ -150,18 +150,24 @@ module.exports.validatioReqBody = (req, data) => {
               newPassword: Joi.string().required()
           }).unknown();
           break;
-      case "changePassword":
+      case "resetPassword":
         schema = Joi.object({
-            currentPassword: Joi.string().required(),
-            newPassword: Joi.string().required()
+          id: Joi.string().required(),
+          token: Joi.string().required(),
+          password: Joi.string().required()
         }).unknown();
         break;
-      case "deleteUser":
+      case "verifyOTP":
           schema = Joi.object({
-              password: Joi.string().required()
+            userId: Joi.string().required(),
+            otp: Joi.string().required()
           }).unknown();
           break;
-
+      case "email":
+        schema = Joi.object({
+          email: Joi.string().email().required(),
+        }).unknown();
+      break;
       case "userId":
           schema = Joi.object({
             userId: Joi.string().required(),

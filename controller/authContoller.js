@@ -179,7 +179,8 @@ module.exports = {
   forgetPassword: async (req, res) => {
     try {
       const { email } = req.body;
-      if (commonFunctions.checkBlank([email])) {
+      let checkValidate = commonFunctions.validatioReqBody(req, "email");
+        if (checkValidate !== true) {
         return res.status(400).send({
           success: true,
           message: "Bad Request",
@@ -249,7 +250,11 @@ module.exports = {
     try {
       const { password } = req.body;
       const { id, token } = req.params;
-      if (commonFunctions.checkBlank([id, password, token])) {
+      req.body.id = req.params.id
+      req.body.token = req.params.token
+      let checkValidate = commonFunctions.validatioReqBody(req, "resetPassword");
+      // Validate user input
+      if (checkValidate !== true) {
         return res.status(400).send({
           success: false,
           message: "Bad Request",
@@ -327,7 +332,8 @@ module.exports = {
   resendOtp: async (req, res) => {
     try {
       const { userId } = req.body;
-      if (commonFunctions.checkBlank([userId])) {
+      let checkValidate = commonFunctions.validatioReqBody(req, "userId");
+      if (checkValidate !== true) {
         return res.status(400).send({
           success: false,
           message: "Bad Request",
@@ -353,7 +359,8 @@ module.exports = {
   verifyOTP: async (req, res) => {
     try {
       const { userId, otp } = req.body;
-      if (commonFunctions.checkBlank([userId, otp])) {
+      let checkValidate = commonFunctions.validatioReqBody(req, "userId");
+      if (checkValidate !== true) {
         return res.status(400).send({
           success: false,
           message: "Bad Request",
